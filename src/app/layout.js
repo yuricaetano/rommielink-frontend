@@ -1,18 +1,17 @@
-import Header from '../components/Header'; // Importando o Header corretamente
+import '../styles/globals.css';
+import { Roboto } from 'next/font/google';  // Importando corretamente a fonte
+//bebasNeue
+const  roboto = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+});
 
 export default function Layout({ children }) {
   return (
-    <html lang="pt-br">
-      <head>
-        <meta charSet="UTF-8" />
-        <title>RoomieLink</title>
-      </head>
-      <body>
-        <Header /> {/* Agora o Header está sendo utilizado */}
-        <main>{children}</main>
-        <footer>
-          {/* Rodapé */}
-        </footer>
+    <html lang="pt-BR">
+      <head />
+      <body className={roboto.className}>
+        {children}
       </body>
     </html>
   );
