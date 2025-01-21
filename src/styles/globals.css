@@ -1,12 +1,12 @@
 body {
-    font-family: system-ui, sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+    font-family: Lexend Giga, sans-serif;
     font-feature-settings: normal;
     font-variation-settings: normal;
     margin: 0;
     padding: 0;
-    background-color: #645bde;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;  /* Garante que o conteúdo fique alinhado ao topo */
     align-items: center;
     height: 100vh;
 }
@@ -14,4 +14,18 @@ body {
 button {
     cursor: pointer;
     transition: border 0.1s ease, box-shadow 0.3s ease;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    /* top: 0; */
+    /* left: 0;
+    z-index: 1000; */
+}
+
+main {
+    margin-top: 150px; /* Para não sobrepor o cabeçalho */
+    width: 100%;
+    text-align: center;
 }

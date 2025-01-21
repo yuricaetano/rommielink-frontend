@@ -1,0 +1,136 @@
+/* Estilo do Cabeçalho */
+.header {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #000000;
+    box-shadow: 2px 2px rgb(22, 22, 22);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    margin-top: 1%;
+    left: 0;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .nav-link {
+    color: #0f0f0f;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .nav-button {
+    background-color: #ffd83b;
+    color: #000;
+    padding: 5px 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 3px 3px rgb(22, 22, 22, 1);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav-button:hover {
+    background-color: #ffcc00;
+    color: #000;
+    transition: background-color 0.5s ease;
+  }
+  
+  /* Estilos da Listagem */
+  .listagem-container {
+    width: 80%;
+    margin: 120px auto 50px; /* Ajustado o topo para 120px para que o conteúdo não fique sobreposto ao cabeçalho */
+    text-align: center;
+  }
+  
+  .listagem-titulo {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .card-container {
+    width: 300px;
+    height: auto;
+    margin: 20px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .card-container:hover {
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.7);
+  }
+  
+  .card-link {
+    display: block;
+    text-decoration: none;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 50%;
+    border-bottom: 2px solid #000;
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .card-date {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .card-description {
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-clamp: 4;
+  }
+  
+  .card-content strong {
+    font-weight: bold;
+    font-size: 16px;
+    color: #ff0;
+  }  

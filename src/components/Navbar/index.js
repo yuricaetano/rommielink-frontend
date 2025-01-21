@@ -1,23 +1,23 @@
 import Link from 'next/link';
 
-const Header = () => {
+const Navbar = () => {
     return (
         <header style={styles.header}>
             <nav>
                 <ul style={styles.navList}>
                     <li style={styles.navItem}>
-                        <Link href="/">
-                            <a style={styles.navLink}>Home</a>
+                        <Link href="/" style={styles.navLink}>
+                            Home
                         </Link>
                     </li>
                     <li style={styles.navItem}>
-                        <Link href="/login">
-                            <a style={styles.navLink}>Login</a>
+                        <Link href="/login" style={styles.navLink}>
+                            Login
                         </Link>
                     </li>
                     <li style={styles.navItem}>
-                        <Link href="/register">
-                            <a style={styles.navLink}>Register</a>
+                        <Link href="/cadastro" style={styles.navLink}>
+                            Cadastrar
                         </Link>
                     </li>
                 </ul>
@@ -28,7 +28,7 @@ const Header = () => {
 
 const styles = {
     header: {
-        backgroundColor: '#645bde',
+        // backgroundColor: '#645bde',
         padding: '10px 20px',
         textAlign: 'center',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
@@ -50,4 +50,4 @@ const styles = {
     },
 };
 
-export default Header;
+export default Navbar;

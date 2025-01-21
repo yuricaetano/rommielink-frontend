@@ -1,18 +1,29 @@
 import '../styles/globals.css';
-import { Roboto } from 'next/font/google';  // Importando corretamente a fonte
-//bebasNeue
-const  roboto = Roboto({
+import { Lexend_Giga, Archivo_Black } from 'next/font/google';
+
+// Fonte principal
+const lexendGiga = Lexend_Giga({
+  weight: '400',
+  subsets: ['latin'],
+});
+
+// Fonte para destaque
+const archivoBlack = Archivo_Black({
   weight: '400',
   subsets: ['latin'],
 });
 
 export default function Layout({ children }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className={lexendGiga.className}>
       <head />
-      <body className={roboto.className}>
+      <body>
         {children}
       </body>
     </html>
   );
 }
+
+export const fonts = {
+  archivoBlack: archivoBlack.className,
+};
