@@ -1,53 +1,30 @@
-import Link from 'next/link';
+import Link from 'next/link'; // Para usar o sistema de navegação do Next.js
+import Image from 'next/image';
+import './styles.css'
 
-const Navbar = () => {
-    return (
-        <header style={styles.header}>
-            <nav>
-                <ul style={styles.navList}>
-                    <li style={styles.navItem}>
-                        <Link href="/" style={styles.navLink}>
-                            Home
-                        </Link>
-                    </li>
-                    <li style={styles.navItem}>
-                        <Link href="/login" style={styles.navLink}>
-                            Login
-                        </Link>
-                    </li>
-                    <li style={styles.navItem}>
-                        <Link href="/cadastro" style={styles.navLink}>
-                            Cadastrar
-                        </Link>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-    );
-};
-
-const styles = {
-    header: {
-        // backgroundColor: '#645bde',
-        padding: '10px 20px',
-        textAlign: 'center',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    },
-    navList: {
-        listStyle: 'none',
-        padding: 0,
-        margin: 0,
-        display: 'flex',
-        justifyContent: 'center',
-    },
-    navItem: {
-        margin: '0 15px',
-    },
-    navLink: {
-        color: '#fff',
-        textDecoration: 'none',
-        fontWeight: 'bold',
-    },
-};
-
-export default Navbar;
+export default function Navbar({ onLoginClick, onRegisterClick }) {
+  return (
+    <header className="header">
+            <Link href="/">
+        <Image 
+          src="/logoPreto.png" 
+          alt="Logo" 
+          width={100} 
+          height={10} 
+          className="logo"
+        />
+      </Link>
+      <div className="nav">
+        <button onClick={onLoginClick} className="nav-link">
+          Entrar
+        </button>
+        <button onClick={onRegisterClick} className="nav-link">
+          Cadastrar
+        </button>
+        <Link href="/quero-anunciar" className="nav-button">
+          Quero Anunciar
+        </Link>
+      </div>
+    </header>
+  );
+}

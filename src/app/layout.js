@@ -1,15 +1,10 @@
 import '../styles/globals.css';
-import { Lexend_Giga, Archivo_Black } from 'next/font/google';
+import { Lexend_Giga } from 'next/font/google';
+// import Navbar from '../components/navbar';
 
 // Fonte principal
 const lexendGiga = Lexend_Giga({
-  weight: '400',
-  subsets: ['latin'],
-});
-
-// Fonte para destaque
-const archivoBlack = Archivo_Black({
-  weight: '400',
+  weight: ['400', '700'], // Incluí peso 700 para possíveis títulos
   subsets: ['latin'],
 });
 
@@ -18,12 +13,9 @@ export default function Layout({ children }) {
     <html lang="pt-BR" className={lexendGiga.className}>
       <head />
       <body>
-        {children}
+        {/* <Navbar /> */}
+        <main>{children}</main>
       </body>
     </html>
   );
 }
-
-export const fonts = {
-  archivoBlack: archivoBlack.className,
-};
