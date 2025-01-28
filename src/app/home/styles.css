@@ -139,6 +139,115 @@ input {
 }
 
 .register-link span:hover {
-  color: #ff5c5c;
+  text-decoration: underline;
   transition: .3s;
+}
+
+/* Corrigindo a sobreposição do navbar */
+.home-main {
+  margin-top: 80px;
+  padding: 20px;
+}
+
+.home-hero {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.home-hero-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.home-search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 570px; /* Soma do max-width do input e largura fixa do botão */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  box-sizing: border-box;
+}
+
+.home-search-bar {
+  display: flex;
+  align-items: stretch; /* Garante que o botão e o input tenham a mesma altura */
+  justify-content: center;
+  width: 100%;
+  max-width: 570px; /* Soma do input + botão */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.home-input {
+  padding: 0 20px;
+  border: 2px solid #000;
+  border-right: none; /* Remove a borda entre input e botão */
+  border-radius: 4px 0 0 4px;
+  flex: 1; /* Input ocupa o máximo de espaço disponível */
+  height: 60px; /* Altura fixa */
+  box-sizing: border-box;
+  outline: none;
+}
+
+.search-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px; /* Largura fixa */
+  height: 60px; /* Altura igual à do input */
+  font-size: 32px;
+  font-weight: bold;
+  background-color: #ffec45;
+  color: #000;
+  border: 2px solid #000;
+  border-left: none; /* Remove a borda entre o botão e o input */
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.search-icon:hover {
+  box-shadow: 2px 4px 0 #000;
+  transform: translate(-3px, -3px);
+}
+
+
+.home-results {
+  margin-top: 20px;
+}
+
+.home-results-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.home-results-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.home-result-item {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
+}
+
+.home-result-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
