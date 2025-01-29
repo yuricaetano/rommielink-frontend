@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Navbar from "@/components/navbar/index"; // Certifique-se de ajustar o caminho
+import Navbar from "../../components/navbar"; // Certifique-se de ajustar o caminho
 import axios from "axios";
 import "./styles.css";
 
