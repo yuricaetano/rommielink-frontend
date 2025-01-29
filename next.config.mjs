@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode: true, // Ativa o modo estrito do React (opcional)
+    reactStrictMode: true,
+    output: 'standalone',
   };
   
   export default nextConfig;
