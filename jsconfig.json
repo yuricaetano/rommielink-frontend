@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": "src", // Definindo a base para o diretório 'src'
     "paths": {
-      "@/*": ["*"]
+      "*": ["*"] // Permitindo que qualquer importação a partir de 'src' seja resolvida diretamente
     }
   }
 }
