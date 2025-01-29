@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",  // Define src como a raiz para importações
+    "baseUrl": "./src",  // Base URL do seu projeto
     "paths": {
-      "components/*": ["src/components/*"]  // Mapeia a pasta components
+      "components/*": ["src/components/*"]  // Caminho para a pasta components
     }
   }
 }

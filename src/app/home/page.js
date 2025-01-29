@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Navbar from "components/navbar";
+import TestComponent from "components/teste";
 import axios from "axios";
 import "./styles.css";
 
@@ -54,7 +55,7 @@ export default function HomePage() {
   return (
     <>
       <Navbar onLoginClick={openLoginModal} onRegisterClick={openRegisterModal} />
-
+      <TestComponent />
       <main className="home-main">
         {/* Modal Handling */}
         {isLoginModalOpen && <LoginModal onClose={closeLoginModal} />}
