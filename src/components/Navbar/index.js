@@ -15,12 +15,12 @@ export default function Navbar({ onLoginClick, onRegisterClick }) {
         />
       </Link>
       <div className="nav">
-        <button onClick={onLoginClick} className="nav-link">
-          Entrar
-        </button>
-        <button onClick={onRegisterClick} className="nav-link">
-          Cadastrar
-        </button>
+          <p onClick={onLoginClick} className="nav-link">
+            Entrar
+          </p>
+          <p onClick={onRegisterClick} className="nav-link">
+            Cadastrar
+          </p>
         <Link href="/quero-anunciar" className="nav-button">
           Quero Anunciar
         </Link>

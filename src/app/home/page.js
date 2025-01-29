@@ -63,7 +63,7 @@ export default function HomePage() {
         {/* Frase de efeito e barra de pesquisa */}
         <section className="home-hero">
           <h1 className="home-hero-title">
-            Reduza seus gastos encontrando<br/> alguém para morar com você
+            Reduza seus gastos<br/> encontrando alguém para<br/>morar com você
           </h1>
           <div className="home-search-bar">
             <input
@@ -82,7 +82,7 @@ export default function HomePage() {
             </button>
           </div>
         </section>
-
+        
         {/* Exibição dos resultados */}
         {hasSearched && (
         <section className="home-results">
@@ -126,7 +126,7 @@ function LoginModal({ onClose }) {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:3000/home", formData);
+      const response = await axios.post("https://rommielink-backend-git-main-yuris-projects-98f41e79.vercel.app/api/user/login", formData);
       alert("Login bem-sucedido! Token: " + response.data.token);
       onClose();
     } catch (err) {
@@ -165,7 +165,7 @@ function LoginModal({ onClose }) {
             required
           />
           {/* <label className="forgot-password">Esqueci minha senha</label> */}
-          <button className="button-submit" type="submit">Entrar</button>
+          <button className="button-submit" type="submit">⏎</button>
         </form>
         <p className="register-link">
           Não possui conta? <span onClick={() => openRegisterModal()}>Cadastre-se!</span>
@@ -184,6 +184,7 @@ function RegisterModal({ onClose }) {
     telefone: "",
     dataNascimento: "",
     nomeUsuario: "",
+    confirmarSenha: "", // Adicionando confirmar senha ao estado
   });
   const [error, setError] = useState("");
   const [success, setSuccessMessage] = useState(false);
@@ -198,13 +199,13 @@ function RegisterModal({ onClose }) {
     setError("");
     setSuccessMessage("");
 
-  if (formData.senha !== formData.confirmarSenha) {
-    setError("As senhas não coincidem.");
-    return;
-  }
+    if (formData.senha !== formData.confirmarSenha) {
+      setError("As senhas não coincidem.");
+      return;
+    }
 
     try {
-      const response = await axios.post("http://localhost:3000/", formData);
+      await axios.post(`https://rommielink-backend-git-main-yuris-projects-98f41e79.vercel.app/api/user`, formData);
       setSuccessMessage("Cadastro realizado com sucesso!");
       onClose();
     } catch (err) {
@@ -287,7 +288,7 @@ function RegisterModal({ onClose }) {
             onChange={handleInputChange}
             required
           />
-          <button className="button-submit" type="submit">Cadastrar</button>
+          <button className="button-submit" type="submit">⏎</button>
         </form>
       </div>
     </div>
